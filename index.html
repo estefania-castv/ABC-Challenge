@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ABC Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barra de navegacion -->
+  <nav class="navbar">
+    <h2>ABC Challenge</h2>
+    <p class="contador-caja">Letras vistas: <span id="contador">0</span> de 26</p>
+  </nav>
+
+  <!-- Botones del filtro -->
+  <div class="filtros">
+    <button class="boton-vocales" onclick="filtrar('vocales')">Vocales</button>
+    <button class="boton-todas" onclick="filtrar('todas')">Todas</button>
+  </div>
+
+  <!-- Las 26 cards -->
+  <div class="galeria">
+
+      <!-- Letra A -->
+      <div class='card' data-tipo='vocal' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>A</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/aguacate.svg' alt='Aguacate'>
+          <h3>Aguacate</h3>
+        </div>
+      </div>
+
+      <!-- Letra B -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>B</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/ballena.svg' alt='Ballena'>
+          <h3>Ballena</h3>
+        </div>
+      </div>
+
+      <!-- Letra C -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>C</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/casa.svg' alt='Casa'>
+          <h3>Casa</h3>
+        </div>
+      </div>
+
+      <!-- Letra D -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>D</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/delfin.svg' alt='Delfín'>
+          <h3>Delfín</h3>
+        </div>
+      </div>
+
+      <!-- Letra E -->
+      <div class='card' data-tipo='vocal' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>E</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/elefante.svg' alt='Elefante'>
+          <h3>Elefante</h3>
+        </div>
+      </div>
+
+      <!-- Letra F -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>F</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/flor.svg' alt='Flor'>
+          <h3>Flor</h3>
+        </div>
+      </div>
+
+      <!-- Letra G -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>G</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/gato.svg' alt='Gato'>
+          <h3>Gato</h3>
+        </div>
+      </div>
+
+      <!-- Letra H -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>H</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/helado.svg' alt='Helado'>
+          <h3>Helado</h3>
+        </div>
+      </div>
+
+      <!-- Letra I -->
+      <div class='card' data-tipo='vocal' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>I</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/iguana.svg' alt='Iguana'>
+          <h3>Iguana</h3>
+        </div>
+      </div>
+
+      <!-- Letra J -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>J</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/jirafa.svg' alt='Jirafa'>
+          <h3>Jirafa</h3>
+        </div>
+      </div>
+
+      <!-- Letra K -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>K</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/koala.svg' alt='Koala'>
+          <h3>Koala</h3>
+        </div>
+      </div>
+
+      <!-- Letra L -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>L</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/leon.svg' alt='León'>
+          <h3>León</h3>
+        </div>
+      </div>
+
+      <!-- Letra M -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>M</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/manzana.svg' alt='Manzana'>
+          <h3>Manzana</h3>
+        </div>
+      </div>
+
+      <!-- Letra N -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>N</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/naranja.svg' alt='Naranja'>
+          <h3>Naranja</h3>
+        </div>
+      </div>
+
+      <!-- Letra O -->
+      <div class='card' data-tipo='vocal' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>O</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/oso.svg' alt='Oso'>
+          <h3>Oso</h3>
+        </div>
+      </div>
+
+      <!-- Letra P -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>P</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/perro.svg' alt='Perro'>
+          <h3>Perro</h3>
+        </div>
+      </div>
+
+      <!-- Letra Q -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>Q</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/queso.svg' alt='Queso'>
+          <h3>Queso</h3>
+        </div>
+      </div>
+
+      <!-- Letra R -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>R</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/rana.svg' alt='Rana'>
+          <h3>Rana</h3>
+        </div>
+      </div>
+
+      <!-- Letra S -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>S</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/sol.svg' alt='Sol'>
+          <h3>Sol</h3>
+        </div>
+      </div>
+
+      <!-- Letra T -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>T</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/tortuga.svg' alt='Tortuga'>
+          <h3>Tortuga</h3>
+        </div>
+      </div>
+
+      <!-- Letra U -->
+      <div class='card' data-tipo='vocal' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>U</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/uvas.svg' alt='Uvas'>
+          <h3>Uvas</h3>
+        </div>
+      </div>
+
+      <!-- Letra V -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>V</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/vaca.svg' alt='Vaca'>
+          <h3>Vaca</h3>
+        </div>
+      </div>
+
+      <!-- Letra W -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>W</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/waffle.svg' alt='Waffle'>
+          <h3>Waffle</h3>
+        </div>
+      </div>
+
+      <!-- Letra X -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>X</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/xilofono.svg' alt='Xilófono'>
+          <h3>Xilófono</h3>
+        </div>
+      </div>
+
+      <!-- Letra Y -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>Y</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/yoyo.svg' alt='Yoyó'>
+          <h3>Yoyó</h3>
+        </div>
+      </div>
+
+      <!-- Letra Z -->
+      <div class='card' data-tipo='consonante' onclick='voltear(this)'>
+        <div class='card-frente'>
+          <h1>Z</h1>
+        </div>
+        <div class='card-dorso'>
+          <img src='imagenes/zorro.svg' alt='Zorro'>
+          <h3>Zorro</h3>
+        </div>
+      </div>
+
+  </div>
+
+  <!-- Seccion del equipo -->
+  <div class="equipo">
+    <h2>El Equipo</h2>
+    <p>Estephania Castro vega</p>
+ 
+   
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

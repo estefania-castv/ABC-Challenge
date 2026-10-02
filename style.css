@@ -1,0 +1,162 @@
+/* Colores que uso: rojo #e60000, azul #0033cc, amarillo #ffd500 */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background-color: #0033cc;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  border-bottom: 5px solid #ffd500;
+}
+
+.navbar h2 {
+  margin: 0;
+}
+
+.contador-caja {
+  background-color: #ffd500;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* ---------- Botones ---------- */
+.filtros {
+  text-align: center;
+  margin: 25px;
+}
+
+.filtros button {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 25px;
+  margin: 5px;
+  border: 3px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.boton-vocales {
+  background-color: #e60000;
+  color: white;
+}
+
+.boton-todas {
+  background-color: #ffd500;
+  color: black;
+}
+
+.filtros button:hover {
+  background-color: #0033cc;
+  color: white;
+}
+
+/* ---------- Galeria y cards ---------- */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+.card {
+  width: 160px;
+  height: 200px;
+  margin: 12px;
+  position: relative;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.card-frente,
+.card-dorso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid black;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+
+/* El frente tiene los tres colores primarios que se repiten */
+.card-frente {
+  background-color: #e60000;
+  color: white;
+}
+
+.card:nth-child(3n+2) .card-frente {
+  background-color: #0033cc;
+}
+
+.card:nth-child(3n+3) .card-frente {
+  background-color: #ffd500;
+  color: black;
+}
+
+.card-frente h1 {
+  font-size: 80px;
+  margin: 0;
+}
+
+/* El dorso empieza girado para que no se vea */
+.card-dorso {
+  background-color: white;
+  transform: rotateY(180deg);
+}
+
+.card-dorso img {
+  width: 100px;
+  height: 100px;
+}
+
+.card-dorso h3 {
+  margin: 10px 0 0 0;
+  color: #0033cc;
+  font-size: 22px;
+}
+
+/* Cuando tiene la clase volteada se giran los dos lados */
+.card.volteada .card-frente {
+  transform: rotateY(180deg);
+}
+
+.card.volteada .card-dorso {
+  transform: rotateY(360deg);
+}
+
+/* ---------- Equipo ---------- */
+.equipo {
+  background-color: #0033cc;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-top: 30px;
+  border-top: 5px solid #e60000;
+}
+
+.equipo p {
+  margin: 8px;
+  font-size: 18px;
+}
+
+.creditos {
+  font-size: 12px;
+  margin-top: 25px;
+}
